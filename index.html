@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	
+</head>
+<body>
+	<div id="name">
+		<form>
+		Name:	<input type="text" id="name" value="" onchange="myFunction3(this.value)">
+		</form>
+	</div>
+	
+	<div id="gender" value="">
+		<input type="radio" id="male" value="male" name="genders" onclick="myFunction5(this.value)">
+		<label for="male" >male</label>
+		<input type="radio" id="female" value="female" name="genders" onclick="myFunction5(this.value)">
+		<label for="female" >female</label>
+	</div>
+
+	<div id="address">
+		<form >
+		address:<input type="text" id="address" value="" onchange="myFunction4(this.value)">
+		</form>
+
+	</div>
+
+	
+
+	<div>
+		<select name="information" id="education" onchange="myFunction()">
+			<option value="matric">matric</option>
+			<option value="inter">inter</option>
+		</select>
+	</div>
+        <div>
+		<select id="profession" onchange="myFunction2()">
+			<option value="electrition">electrition </option>
+			<option value="programmer">programmer</option>
+		</select>
+	</div>
+        <br>
+	<button type="button" onclick="addPerson()" >submit</button>
+	<br>
+<script src="./script.js"></script>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("education").value;
+}
+
+function myFunction2() {
+  var x = document.getElementById("profession").value;
+}
+
+function myFunction3(value) {
+  document.getElementById("name").value = value;
+}
+
+function myFunction4(value) {
+  document.getElementById("address").value = value;
+}
+
+function myFunction5(value) {
+  document.getElementById("gender").value = value;
+}
+
+</script>
+
+</body>
+</html>
